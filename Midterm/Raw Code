@@ -1,5 +1,5 @@
 ---
-title: "Fibrinogen's Role in the Risk of Coronary Heart Disease"
+title: "**Fibrinogen's Role in the Risk of Coronary Heart Disease**"
 author: "Abigail Mabe"
 output: 
   pdf_document:
@@ -33,20 +33,26 @@ The “second step” in this analysis is a random-effects meta-analysis model, 
 <blockquote>
 <div class="equation">
 \[ \hat{\beta}_s = \beta_s + \epsilon_s, \text{ where } \epsilon_s \sim N(0,v_s) \]
-\[ \beta_s = \beta + n_s, \text{ where } n_s \sim N(0,\tau^2) \]
+\[ \beta_s = \beta + \eta_s, \text{ where } \eta_s \sim N(0,\tau^2) \]
 </div>
 <blockquote>
 A fixed-effects model was created parallel to the random-effects model above to facilitate further analysis. 
 <blockquote>
 <blockquote>
 Due to the high level of heterogeneity found in the above models, various confounder adjustments on baseline measurements were analyzed. Examples of these confounders include age, sex, smoking, total cholesterol, systolic blood pressure, and BMI, as well as the interactions between them. 
-In addition, joint effects and effect modifiers were introduced in the original PH model to incorporate both within and between-study effects for the confounders stated above. This part of the analysis ultimately estimates the interaction between the respective potential effect modifier and fibrinogen to assess the correlated risk of CHD. For effect modifiers such as age, the model creates an overall interaction term based on within-study information, \(\delta_{w}\), by adding the term \(\delta_{s} E_{si} X_{si}\) to the original “first step”. For effect modifiers such as type of population recruited, which are assessed at the study level and rely on between-study comparisons, a between-study interaction term (\(\delta_{B}\)) is created through the “second step” model. By adding \(\delta_{B}\) \(X_{s}\) to the second equation in that model, the interaction term allows for continual analysis of the balance between within-study and between-study information.
+In addition, joint effects and effect modifiers were introduced in the original PH model to incorporate both within and between-study effects for the confounders stated above. This part of the analysis ultimately estimates the interaction between the respective potential effect modifier and fibrinogen to assess the correlated risk of CHD. For effect modifiers such as age, the model creates an overall interaction term based on within-study information, \(\delta_{w}\), by adding the term \(\delta_{s} E_{si} X_{si}\) to the original “first step”. For effect modifiers such as type of population recruited, which are assessed at the study level and rely on between-study comparisons, a between-study interaction term (\(\delta_{B}\)) is created through the “second step” model. By adding \(\delta_{B} X_{s}\) to the second equation in that model, the interaction term created allows for continual analysis of the balance between within-study and between-study information.
 <blockquote>
 <blockquote>
 In addition to the main analysis above, additional analyses are conducted to explore the linearity of risk exposure and log HR. To do so, the cox PH regression for each study is separately analyzed. The set of the log HRs from these analyses are pooled across studies using a multivariate version of random-effects meta-analysis and plotted against mean exposure level in each quantile group. The purpose of this is to view the linearity of the model while allowing for inter-correlations within and between studies.
 <blockquote>
 <blockquote>
-Finally, throughout the analysis, there has been an assumption that regression coefficients in the PH model do not change with time since the baseline measurements of fibrinogen. The authors combine interaction terms between exposure and time over studies and use random-effects meta-analysis along with chi-squared tests to assess the truth of the above assumption.
+Finally, throughout the analysis, there has been an assumption that regression coefficients in the PH model do not change with time since the baseline measurements of fibrinogen. The authors combine interaction terms between exposure and time over studies and use random-effects meta-analysis along with chi-squared tests to assess the truth of the above assumption. The random-effects meta-analysis for this test, assuming linear time-dependence, is given by the following equation: 
+\[
+\log(h_{ski}(t|E_{si}, X_{si})) = \log(h_{0sk}(t)) + \beta_s E_{si} + \xi_{s} t E_{si}
+\]
+\[
+\xi_{s} = \xi + \eta_s, \text{ where } \eta_s \sim N(0, \tau^2)
+\]
 <blockquote>
 # \textbf{\textit{Results}}
 <blockquote>
@@ -60,7 +66,7 @@ By further analyzing these confounding issues by observing the joint effects and
 <blockquote>
 <blockquote>
 Considering the additional analyses mentioned briefly above, the plot displaying pooled log HRs over mean baseline fibrinogen (g/l) displays the result that a log-linear model for risk is satisfactory. In addition, there is no evidence of departures of regression coefficients in the PH model for fibrinogen, and no evidence of heterogeneity between studies in this regard. <blockquote>
-# \textbf{\textit{Discussion of Normative Concerns}}
+# \textbf{\textit{Discussion of Normative Considerations}}
 <blockquote>
 The study outlined above, although it tries to limit biased results by thorough methodology, has a potential for biases that could possibly lead to both unreliable results and ethical dilemmas. First and foremost, there are fundamental issues considering the source of data utilized for the study. The Emerging Risk Factors Collaboration (ERFC) gathers its data from various publications, literature searches, and correspondence with authors of relevant reports (Thompson). Since this data is not coming directly from medical directories or other completely reliable medical sources, the ERFC could display publication and reporting biases, especially considering this is data gathered in predominantly Western populations. This can lead to arbitrary discrimination within the analysis itself, or in the implementation of it globally. This can be dangerous in many regards considering possible misestimation in the risk of CHD within non-western populations, especially given CHD is the most common form of heart disease. 
 <blockquote>
@@ -73,8 +79,9 @@ In addition to these concerns with the ERFC itself, there are a few potential bi
 <blockquote>
 Possible underestimation, caused by measurement error and within-person fibrinogen variation, can lead to downward bias of an estimated association between fibrinogen and CHD risk. If the model estimates a lower risk association for the patient than what their actual risk association is, in relation to baseline fibrinogen, it puts the patient at a much higher risk of CHD-related issues. This is a concerning point, especially when considering 20% of people are not aware of their CHD symptoms as-is. The study tries to correct for possible measurement error/underestimation, and results in a corrected HR of 1.96 per 1 g/l increase in fibrinogen v. 1.38 uncorrected, further displaying the issue highlighted above.  
 <blockquote>
+# \textbf{\textit{Conclusion}}
 <blockquote>
-Overall, the study displays useful analysis in estimating the associated risk of CHD based on fibrinogen levels in patients. Although its methods are extensive, and results seem reliable, further exploration uncovers possible biases that could lead to fundamental issues and moral dilemmas with the study. However, the authors of the paper are finding ways to limit these biases with various methods of confounder adjustments, citing data collection follow-ups (within the ERFC itself), and exploring ways that aim at limiting measurement errors as a whole.
+Overall, the study described above displays useful analysis in estimating the associated risk of CHD based on fibrinogen levels in patients. The results indicate a strong association between baseline fibrinogen measurements and the corresponding evolution of CHD risk over time, which could greatly improve risk estimations in at-risk (and unknowingly at-risk) patients. These results are supported through the use of Cox proportional hazards models and various random-effects meta-analysis. Although its methods are extensive, and results seem reliable, further exploration uncovers possible biases that could lead to fundamental issues and moral dilemmas with the study. These include source biases, data privacy concerns, within-study confounding effects, and underestimation. However, the authors of the paper are finding ways to limit these biases with various methods of confounder adjustments, citing data collection follow-ups (within the ERFC itself), and exploring ways that aim at limiting measurement errors as a whole. Through their efforts, the authors justify utilizing baseline fibrinogen in estimating the risk of CHD, which can help thousands who are affected by it (possibly unknowingly) every year. 
 <blockquote>
 
 \pagebreak
