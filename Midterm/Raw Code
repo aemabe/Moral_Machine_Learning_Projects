@@ -46,13 +46,16 @@ In addition, joint effects and effect modifiers were introduced in the original 
 In addition to the main analysis above, additional analyses are conducted to explore the linearity of risk exposure and log HR. To do so, the cox PH regression for each study is separately analyzed. The set of the log HRs from these analyses are pooled across studies using a multivariate version of random-effects meta-analysis and plotted against mean exposure level in each quantile group. The purpose of this is to view the linearity of the model while allowing for inter-correlations within and between studies.
 <blockquote>
 <blockquote>
-Finally, throughout the analysis, there has been an assumption that regression coefficients in the PH model do not change with time since the baseline measurements of fibrinogen. The authors combine interaction terms between exposure and time over studies and use random-effects meta-analysis along with chi-squared tests to assess the truth of the above assumption. The random-effects meta-analysis for this test, assuming linear time-dependence, is given by the following equation: 
+Finally, throughout the analysis, there has been an assumption that regression coefficients in the PH model do not change with time since the baseline measurements of fibrinogen.The authors formulated a random-effects meta-analysis model, assuming linear time-dependence, to test the above assumption. The model is given by the following:
+<blockquote>
 \[
 \log(h_{ski}(t|E_{si}, X_{si})) = \log(h_{0sk}(t)) + \beta_s E_{si} + \xi_{s} t E_{si}
 \]
 \[
 \xi_{s} = \xi + \eta_s, \text{ where } \eta_s \sim N(0, \tau^2)
 \]
+<blockquote>
+where \(\beta_s\) displays separate fixed effects, and the estimate of focus is \(\xi\). This can be tested with a \(\chi^2\) statistic. As visualized in the model above, the authors combine interaction terms between exposure and time over studies and utilize chi-squared tests to assess the truth of the assumption.
 <blockquote>
 # \textbf{\textit{Results}}
 <blockquote>
