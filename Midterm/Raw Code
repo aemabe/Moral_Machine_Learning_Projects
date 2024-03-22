@@ -26,7 +26,7 @@ The main analysis of this paper considers a Cox Proportional Hazards (PH) model,
 </div>
 
 <blockquote>
-In the above equation, the parameters of interest are the log hazard ratios (HRs, denoted \(\beta_{s}\) per unit increase in exposure in study \(s\), adjusted for \(X_{si}\). The variance of the estimated \(\beta_{s}\), written as \(v_{s}\), is utilized in the “second step”, as outlined below.
+In the above equation, the parameters of interest are the log hazard ratios (HRs, denoted \(\beta_{s}\) per unit increase in exposure in study \(s\), adjusted for \(X_{si}\)). The variance of the estimated \(\beta_{s}\), written as \(v_{s}\), is utilized in the “second step”, as outlined below.
 <blockquote>
 <blockquote>
 The “second step” in this analysis is a random-effects meta-analysis model, which combines within-study information and between-study variance (denoted \(\tau^2\)) on the relationship between exposure and risk, as written below:
