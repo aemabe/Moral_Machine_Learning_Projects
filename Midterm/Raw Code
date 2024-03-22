@@ -4,15 +4,16 @@ author: "Abigail Mabe"
 output: 
   pdf_document:
   latex_engine: lualatex
+header-includes:
+  - \usepackage{indentfirst}
 ---
-Introduction
-------------
+\setlength{\parindent}{1cm}
+# \textbf{\textit{Introduction}}
 <blockquote>
 Cardiovascular diseases are the leading cause of death globally. Coronary Heart Disease (CHD) is the most common form of heart disease, defined in the following analysis as the first non-fatal myocardial infarction or coronary heart in those without known cardiovascular disease at an initial examination (Thompson). This disease is prevalent among over 200 million people globally, with approximately 375,000 deaths attributed to CHD annually. Then, as CHD is such a widespread and pressing disease, there are many global collaborations aimed at addressing possible risk factors, with The Emerging Risk Factors Collaboration (ERFC) being one of the largest. The ERFC hosts individual records from more than 1.2 million participants in 116 prospective studies of major cardiovascular disease outcomes. Of this large database, the Fibrinogen Studies collaboration (a subset of the ERFC containing data on 154,211 participants across 31 prospective studies) analyzes baseline plasma fibrinogen concentration and the correlated risk of CHD, which is what this paper focuses on. Fibrinogen is a protein involved in forming blood clots within the body and can be an important risk factor to developing CHD; the importance of tracking this can help many who may unknowingly have CHD (which is about 1 in 5 people) and can bring awareness to get them proper help. The following study focuses on the association between baseline fibrinogen and the correlated risk of CHD over time. 
 </blockquote>
 
-Methods
--------
+# \textbf{\textit{Methods}}
 
 <blockquote>
 The main analysis of this paper considers a Cox Proportional Hazards (PH) model, estimated for each of the 31 studies separately. The PH model displays the evolution of risk for CHD over time based on differing levels of baseline fibrinogen in patients, independently analyzed for each study; this model is considered the “first step” of the analysis. The models are stratified by sex and randomized group (if the respective studies include randomization). Then, for each study \(s\) with strata \(k\) (where individuals \(i\) have exposure interest \(E_{si}\), effected by covariates \(X_{si}\), which will be mentioned again later), the hazard at time \(t\) after baseline is modelled by: 
@@ -25,7 +26,7 @@ The main analysis of this paper considers a Cox Proportional Hazards (PH) model,
 </div>
 
 <blockquote>
-In the above equation, the parameters of interest are the log hazard ratios (HRs, denoted \(\beta_{s}\) per unit increase in exposure in study s, adjusted for \(X_{si}\). The variance of the estimated \(\beta_{s}\), written as \(v_{s}\), is utilized in the “second step”, as outlined below.
+In the above equation, the parameters of interest are the log hazard ratios (HRs, denoted \(\beta_{s}\) per unit increase in exposure in study \(s\), adjusted for \(X_{si}\). The variance of the estimated \(\beta_{s}\), written as \(v_{s}\), is utilized in the “second step”, as outlined below.
 <blockquote>
 <blockquote>
 The “second step” in this analysis is a random-effects meta-analysis model, which combines within-study information and between-study variance (denoted \(\tau^2\)) on the relationship between exposure and risk, as written below:
@@ -47,8 +48,7 @@ In addition to the main analysis above, additional analyses are conducted to exp
 <blockquote>
 Finally, throughout the analysis, there has been an assumption that regression coefficients in the PH model do not change with time since the baseline measurements of fibrinogen. The authors combine interaction terms between exposure and time over studies and use random-effects meta-analysis along with chi-squared tests to assess the truth of the above assumption.
 <blockquote>
-Results
--------
+# \textbf{\textit{Results}}
 <blockquote>
 The random-effects model produced a combined hazard ratio (HR \(exp(\beta)\)) of 1.57 per 1 g/l higher baseline fibrinogen, with a 64% heterogeneity (\(I^2\)) impact on the imprecision of the overall log HR. In contrast, the fixed-effects model produced an HR point estimate of 1.52 per 1 g/l higher baseline fibrinogen. Both results relate to the mean HR across all studies, rather than reporting each study independently. These results indicate a strong association between baseline fibrinogen levels and the evolution of CHD risk over time, given the hazard ratios are both significantly larger than 1. It also indicates a slightly stronger association between baseline fibrinogen and the risk of CHD within the random-effects model, although the high heterogeneity needs to be investigated further.
 <blockquote>
@@ -60,8 +60,7 @@ By further analyzing these confounding issues by observing the joint effects and
 <blockquote>
 <blockquote>
 Considering the additional analyses mentioned briefly above, the plot displaying pooled log HRs over mean baseline fibrinogen (g/l) displays the result that a log-linear model for risk is satisfactory. In addition, there is no evidence of departures of regression coefficients in the PH model for fibrinogen, and no evidence of heterogeneity between studies in this regard. <blockquote>
-Discussion of Normative Concerns
---------------------------------
+# \textbf{\textit{Discussion of Normative Concerns}}
 <blockquote>
 The study outlined above, although it tries to limit biased results by thorough methodology, has a potential for biases that could possibly lead to both unreliable results and ethical dilemmas. First and foremost, there are fundamental issues considering the source of data utilized for the study. The Emerging Risk Factors Collaboration (ERFC) gathers its data from various publications, literature searches, and correspondence with authors of relevant reports (Thompson). Since this data is not coming directly from medical directories or other completely reliable medical sources, the ERFC could display publication and reporting biases, especially considering this is data gathered in predominantly Western populations. This can lead to arbitrary discrimination within the analysis itself, or in the implementation of it globally. This can be dangerous in many regards considering possible misestimation in the risk of CHD within non-western populations, especially given CHD is the most common form of heart disease. 
 <blockquote>
@@ -80,10 +79,9 @@ Overall, the study displays useful analysis in estimating the associated risk of
 
 \pagebreak
 
-References
-----------
+# \textbf{\textit{References}}
 
 \hangindent=2em
 \hangafter = 1
-Thompson, Simon, et al. “Statistical Methods for the Time-to-Event Analysis of
+\noindent Thompson, Simon, et al. “Statistical Methods for the Time-to-Event Analysis of
 Individual Participant Data from Multiple Epidemiological Studies.” OUP Academic, Oxford University Press, 3 May 2010, academic.oup.com/ije/article/39/5/1345/801905#91888123.
