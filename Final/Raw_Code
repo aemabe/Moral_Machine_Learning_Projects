@@ -10,6 +10,8 @@ header-includes:
   - \usepackage{subcaption}
   - \usepackage{float}
   - \usepackage{setspace} \doublespacing
+  - \usepackage{hyperref}
+  - \usepackage{titlesec}
 ---
 \setlength{\parindent}{1cm}
 # \textbf{Introduction}
@@ -59,23 +61,25 @@ Again, $exp(\beta)$ is the average HR, or average relative risk of coronary hear
 Another method that has been employed in parallel analysis in the ERFC is a fixed-effects meta-analysis. This is similar to a random-effects meta-analysis but assumes no between study heterogeneity and no differences due to chance. This means the value of $I^2$ would be $0\%$, which is quite contrary to the random-effects meta-analysis, indicating variability in study estimates are due entirely to chance. Therefore, in this study, there should be more of a focus on random-effects meta-analysis due to the multitude of study populations and the resulting heterogeneity that is bound to occur, although results from both models can be observed for general comparison. 
 <blockquote>
 <blockquote>
-The above suggestions can be observed in Figure 1. This visualization displays the study-specific HRs for the relationship of baseline fibrinogen with the risk of coronary heart disease in the $31$ prospective studies from the Fibrinogen Studies Collaboration. The overall random-effects meta-analysis is displayed in comparison to the overall fixed-effects meta-analysis at the bottom of the plot. This visual comparison reinforces the idea that a random-effects model is best suited to represent the considered studies, especially given the variation in study-specific HRs clearly displayed between studies in the visualization. In addition, the figure gives a random-effects prediction interval for the true HR in a new study, estimated by $exp\left(\hat{\beta} \pm t_{s-2}\, \sqrt{var(\hat{\beta})+\tau^2}\right)$, where t is the $2.5$-percentile of the t-distribution, and $S$ is the number of studies. This interval is wide due to the presence of obvious heterogeneity, but it remains above $1$, indicating a positive correlation between baseline fibrinogen and relative risk of coronary heart disease.
+The above suggestions can be observed in Figure \ref{fig1}. This visualization displays the study-specific HRs for the relationship of baseline fibrinogen with the risk of coronary heart disease in the $31$ prospective studies from the Fibrinogen Studies Collaboration. The overall random-effects meta-analysis is displayed in comparison to the overall fixed-effects meta-analysis at the bottom of the plot. This visual comparison reinforces the idea that a random-effects model is best suited to represent the considered studies, especially given the variation in study-specific HRs clearly displayed between studies in the visualization. In addition, the figure gives a random-effects prediction interval for the true HR in a new study, estimated by $exp\left(\hat{\beta} \pm t_{s-2}\, \sqrt{var(\hat{\beta})+\tau^2}\right)$, where t is the $2.5$-percentile of the t-distribution, and $S$ is the number of studies. This interval is wide due to the presence of obvious heterogeneity, but it remains above $1$, indicating a positive correlation between baseline fibrinogen and relative risk of coronary heart disease.
 <blockquote>
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{fig1andy.png}
-    \caption{Study-specific HRs and 95\% CI (log scale) for the relationship of baseline fibrinogen with coronary heart disease in 31 studies and meta-analysis}
+    \caption{Study-specific HRs and 95\% CI (log scale) for the relationship of baseline fibrinogen with coronary heart disease in 31 studies and meta-analysis.}
+    \label{fig1}
 \end{figure}
 
 <blockquote>
-The results of the random-effects meta-analysis and fixed-effects meta-analysis are displayed in the table below. Again, these are the combined HRs for the relationship between baseline fibrinogen (g/l) and risk of coronary heart disease, stratified by age in each study separately. The numbers in the HR column represent the relative risk of coronary heart disease per 1 g/l higher baseline fibrinogen concentration (and intuitively the log HR is simply the log of these values). The between-study variance, or heterogeneity in the true log HRs between studies, is given by $\tau^2$, where the p-value corresponds to the test for heterogeneity. Since the p-value is less than $0.05$, or a typical level of significance, there is statistically significant proof for heterogeneity in the analysis, which solidifies the reason for random-effects meta-analysis over fixed-effects meta-analysis. The $I^2$ value, or impact of heterogeneity on the imprecision of the overall log HR, is given in the last column.
+The results of the random-effects meta-analysis and fixed-effects meta-analysis are displayed in the table below (Figure \ref{tab2}). Again, these are the combined HRs for the relationship between baseline fibrinogen (g/l) and risk of coronary heart disease, stratified by age in each study separately. The numbers in the HR column represent the relative risk of coronary heart disease per 1 g/l higher baseline fibrinogen concentration (and intuitively the log HR is simply the log of these values). The between-study variance, or heterogeneity in the true log HRs between studies, is given by $\tau^2$, where the p-value corresponds to the test for heterogeneity. Since the p-value is less than $0.05$, or a typical level of significance, there is statistically significant proof for heterogeneity in the analysis, which solidifies the reason for random-effects meta-analysis over fixed-effects meta-analysis. The $I^2$ value, or impact of heterogeneity on the imprecision of the overall log HR, is given in the last column.
 <blockquote>
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{fig2andy2.png}
-    \caption{Combined HRs for the relationship between baseline fibrinogen (g/l) and coronary heart disease risk}
+    \caption{Combined HRs for the relationship between baseline fibrinogen (g/l) and coronary heart disease risk.}
+    \label{tab2}
 \end{figure}
 
 <blockquote>
@@ -107,26 +111,28 @@ $(4)$	Pooled log HRs found in $(3)$ are plotted against mean exposure level in e
 As an additional note to $(4)$, sensitivity analyses provide a more reliable way to assess the effect of these non-linear changes on the observed results; if the results are similar to the original, it can be assured that a linear risk relationship is appropriate.
 <blockquote>
 <blockquote>
-The table below shows the results from the sensitivity analyses aimed at determining the shape of the risk relationship between baseline fibrinogen and coronary heart disease. The below analyses compare untransformed fibrinogen, log fibrinogen, study-specific standard deviation fibrinogen score, and study-specific standard deviation log fibrinogen score. These results are displayed similarly to the ones in the first random-effects meta-analysis study, expressed as the relative risk in coronary heart disease per 1-standard deviation higher baseline fibrinogen (g/l). Since the values of HR, log HR, and heterogeneity are similar both to the original analysis and to each other, a linear risk relationship can again be assumed.
+The table below (Figure \ref{tab3}) shows the results from the sensitivity analyses aimed at determining the shape of the risk relationship between baseline fibrinogen and coronary heart disease. The below analyses compare untransformed fibrinogen, log fibrinogen, study-specific standard deviation fibrinogen score, and study-specific standard deviation log fibrinogen score. These results are displayed similarly to the ones in the first random-effects meta-analysis study, expressed as the relative risk in coronary heart disease per 1-standard deviation higher baseline fibrinogen (g/l). Since the values of HR, log HR, and heterogeneity are similar both to the original analysis and to each other, a linear risk relationship can again be assumed.
 <blockquote>
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{fig3andy3.png}
-    \caption{Combined HRs for the relationship between baseline fibrinogen (g/l) and coronary heart disease risk}
+    \caption{Combined HRs for the relationship between baseline fibrinogen (g/l) and coronary heart disease risk.}
+    \label{tab3}
 \end{figure}
 
 <blockquote>
 Special attention must be brought to the confounding effects of covariates, which was included as $X_{si}$ in the original PH model. Confounders are a threat to the validity and precision of models and can be especially detrimental in the case of meta-analysis. In this case, a confounder would cause comparison groups to differ with respect to their risk of coronary heart disease beyond the exposure of baseline plasma fibrinogen. This would be a common cause of exposure and outcome such as age. Age is the most important confounder in many epidemiological applications, since age is associated with many physiological changes, so naturally this is the confounder that attracts the most attention for the study at hand.
 <blockquote>
 <blockquote>
-For linear terms, age-at-baseline in a PH model is typically the first adjustment for a possible age confounding factor. An age-at-baseline model is equivalent to including current age as a time-dependent variable, which allows for age to be accounted for in both the individual study PH models and the random-effects meta-analysis model. More complex age adjustments, such as stratification by age categories at baseline (as 5-year bands), as well as polynomial terms and interactions with other covariates (such as sex) can also be used in PH models and corresponding random-effects meta-analysis; this is done to ensure a linear age-at-baseline model is a reasonable adjustment. The relative risk of coronary heart disease per 1 g/l increase in baseline fibrinogen, adjusted for baseline confounding variables age (including adjustments to age), sex, smoking, total cholesterol, systolic blood pressure, and body mass index are displayed in the following table. 
+For linear terms, age-at-baseline in a PH model is typically the first adjustment for a possible age confounding factor. An age-at-baseline model is equivalent to including current age as a time-dependent variable, which allows for age to be accounted for in both the individual study PH models and the random-effects meta-analysis model. More complex age adjustments, such as stratification by age categories at baseline (as 5-year bands), as well as polynomial terms and interactions with other covariates (such as sex) can also be used in PH models and corresponding random-effects meta-analysis; this is done to ensure a linear age-at-baseline model is a reasonable adjustment. The relative risk of coronary heart disease per 1 g/l increase in baseline fibrinogen, adjusted for baseline confounding variables age (including adjustments to age), sex, smoking, total cholesterol, systolic blood pressure, and body mass index are displayed in the following table (Figure \ref{tab4}). 
 <blockquote>
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{fig4andy.png}
-    \caption{Combined HRs for the relationship between baseline fibrinogen (g/l) and coronary heart disease risk; random-effects meta-analysis adjusting for baseline confounding variables}
+    \caption{Combined HRs for the relationship between baseline fibrinogen (g/l) and coronary heart disease risk; random-effects meta-analysis adjusting for baseline confounding variables.}
+    \label{tab4}
 \end{figure}
 
 <blockquote>
