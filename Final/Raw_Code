@@ -67,7 +67,7 @@ The above suggestions can be observed in Figure \ref{fig1}. This visualization d
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{fig1andy.png}
-    \caption{Study-specific HRs and 95\% CI (log scale) for the relationship of baseline fibrinogen with coronary heart disease in 31 studies and meta-analysis.}
+    \caption{Study-specific HRs and 95\% CI (log scale) for the relationship of baseline fibrinogen with coronary heart disease in 31 studies and meta-analysis}
     \label{fig1}
 \end{figure}
 
@@ -78,7 +78,7 @@ The results of the random-effects meta-analysis and fixed-effects meta-analysis 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{fig2andy2.png}
-    \caption{Combined HRs for the relationship between baseline fibrinogen (g/l) and coronary heart disease risk.}
+    \caption{Combined HRs for the relationship between baseline fibrinogen (g/l) and coronary heart disease risk}
     \label{tab2}
 \end{figure}
 
@@ -117,7 +117,7 @@ The table below (Figure \ref{tab3}) shows the results from the sensitivity analy
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{fig3andy3.png}
-    \caption{Combined HRs for the relationship between baseline fibrinogen (g/l) and coronary heart disease risk.}
+    \caption{Combined HRs for the relationship between baseline fibrinogen (g/l) and coronary heart disease risk}
     \label{tab3}
 \end{figure}
 
@@ -131,7 +131,7 @@ For linear terms, age-at-baseline in a PH model is typically the first adjustmen
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{fig4andy.png}
-    \caption{Combined HRs for the relationship between baseline fibrinogen (g/l) and coronary heart disease risk; random-effects meta-analysis adjusting for baseline confounding variables.}
+    \caption{Combined HRs for the relationship between baseline fibrinogen (g/l) and coronary heart disease risk; random-effects meta-analysis adjusting for baseline confounding variables}
     \label{tab4}
 \end{figure}
 
